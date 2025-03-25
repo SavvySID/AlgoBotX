@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# AlgoBotX - AI-Powered Algorand Developer Assistant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*AlgoBotX is an AI-powered assistant designed to help developers build and interact with the ****Algorand blockchain****. It can answer queries about Algorand, fetch blockchain data, assist in smart contract development, and more. The assistant uses ****open-source LLMs**** (like Llama 3 or Mistral) and integrates with Algorand SDK.*
 
-## Available Scripts
+## *🌟 Features*
 
-In the project directory, you can run:
+### 1. **AI Chatbot for Algorand Developers (Developer Focused)**
+   - Prioritizes developer-related questions about the **Algorand blockchain** and **smart contracts**.
+   - Guides developers in **PyTeal** & **TEAL** smart contract development.
+   - Suggests best practices, **SDKs**, and tools for optimal development.
 
-### `npm start`
+### 2. **Algorand Blockchain Explorer Integration**
+   - Fetches the latest block details, **account balances**, and **transaction history**.
+   - Uses the **Algorand Indexer API** for real-time blockchain data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 3. **Wallet Connection (Web App Feature)**
+   - Allows secure wallet connection.
+   - Fetches account balance and transaction history.
+   - Enables transaction signing for **smart contracts**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 4. **AI-Powered Smart Contract Debugger**
+   - Analyzes **PyTeal smart contracts** for:
+     - Errors, inefficiencies, and **security vulnerabilities**.
+     - Optimization suggestions for lower gas fees.
+     - Debugging steps to fix issues.
+   - Supports real-time debugging in **VS Code**.
 
-### `npm test`
+### 5. **Algorand SDK & Smart Contract Assistance**
+   - Supports **Python**, **JavaScript**, and **Go SDKs**.
+   - Provides step-by-step guidance for writing **smart contracts**.
+   - Helps with testing, deployment, and debugging.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 6. **NFT Rewards for Active Users 🎖️**
+   - **Ask & Earn**: Ask a certain number of questions and receive a special **NFT reward**.
+   - **Daily Streaks**: Maintain a daily streak and earn exclusive **NFTs**.
+   - **Leaderboard Challenge**: The top questioner of the month gets a unique **NFT** as recognition of contribution.
+   - **Proof of Contribution**: These **NFTs** can serve as badges of expertise in the **Algorand ecosystem**.
 
-### `npm run build`
+### 7. **In-Bot Testnet Faucet for Developers 💰**
+   - Developers can request **Algorand Testnet Algos** directly through the bot.
+   - **Command Example**: `/get_faucet <your_wallet_address>`
+   - The bot will automatically transfer **Testnet Algos** to the provided address—no need to manually visit a faucet website for instant test tokens!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 8. **Multi-Platform Support (Starting with Web App)**
+   - Initial launch as a **Web App** to provide real-time assistance and interactive experiences for developers.
+   - Future expansion into a **Discord bot** for integration into developer communities.
+   - Ensures developers get direct support inside their workflow through an easy-to-use web interface.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Setup Guide
 
-### `npm run eject`
+### 📌 Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Node.js** (for running the backend)
+- **Python** (for smart contract development support)
+- **Algorand SDK** for Python, JavaScript, or Go (depending on your preferred language)
+- A **Discord account** (if using the bot on Discord)
