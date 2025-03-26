@@ -1,12 +1,13 @@
-from algosdk.v2client import algod
+import requests
 
-# Algorand Node Configuration
-ALGOD_TOKEN = "your-algod-token"
-ALGOD_ADDRESS = "https://testnet-api.algonode.cloud"
+# AlgoExplorer API Base URL
+ALGO_EXPLORER_API = "https://algoexplorerapi.io/v2"
 
-client = algod.AlgodClient(ALGOD_TOKEN, ALGOD_ADDRESS)
-
-def get_balance(address: str):
-    """Fetches the balance of an Algorand account."""
-    account_info = client.account_info(address)
-    return account_info.get('amount') / 1e6  # Convert microAlgos to Algos
+# Function to fetch block details
+def fetch_block_details(block_number):
+    try:
+        response = requests.get(f"{ALGO_EXPLORER_API}/blocks/{block_number}")
+        response.raise_for_status()  # Raise an error if status code is not 200
+        return response.json()
+    except requests.RequestException as e:
+        return {"error": str(e)}

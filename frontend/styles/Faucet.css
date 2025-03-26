@@ -1,0 +1,37 @@
+.faucet-container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: #e3f2fd;
+    border: 1px solid #b3e5fc;
+    border-radius: 8px;
+}
+
+.faucet-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.faucet-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #03a9f4;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.faucet-button:hover {
+    background: #0288d1;
+}
+
+.faucet-status {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}

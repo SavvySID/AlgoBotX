@@ -1,0 +1,35 @@
+.sdk-container {
+    text-align: center;
+    padding: 20px;
+    background: #eef;
+    border-radius: 8px;
+    width: 80%;
+    margin: auto;
+}
+
+.sdk-select {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.sdk-button {
+    padding: 8px 16px;
+    border: none;
+    background: #ff9800;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.sdk-button:hover {
+    background: #e68900;
+}
+
+.sdk-docs {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}

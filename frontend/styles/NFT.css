@@ -1,0 +1,39 @@
+.nft-container {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 8px;
+}
+
+.nft-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.nft-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #ffc107;
+    color: black;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.nft-button:hover {
+    background: #e0a800;
+}
+
+.nft-reward {
+    margin-top: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

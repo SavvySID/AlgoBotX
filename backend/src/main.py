@@ -1,32 +1,32 @@
-from flask import Flask, request, jsonify
-from langchain.llms import Ollama
-from algosdk.v2client import algod
-from services.ai_assistant import process_message
-from services.algo_explorer import get_balance
+from flask import Flask
+from flask_cors import CORS
+
+# Import all blueprints (Route Modules)
+from routes.ai import ai_bp
+from routes.algo_explorer import algo_explorer_bp
+from routes.wallet import wallet_bp
+from routes.smart_contract import smart_contract_bp
+from routes.sdk import sdk_bp
+from routes.nft import nft_bp
+from routes.faucet import faucet_bp
 
 app = Flask(__name__)
 
-# Load AI model
-llm = Ollama(model="mistral")
+# Enable CORS for all routes
+CORS(app, resources={r"/*": {"origins": "*"}})
 
-# Algorand Node Configuration
-ALGOD_TOKEN = "your-algod-token"
-ALGOD_ADDRESS = "https://testnet-api.algonode.cloud"
-client = algod.AlgodClient(ALGOD_TOKEN, ALGOD_ADDRESS)
+# ✅ Register Blueprints (Modular Route Integration)
+app.register_blueprint(ai_bp, url_prefix="/ai")  # AI Assistant
+app.register_blueprint(algo_explorer_bp, url_prefix="/algo_explorer")  # Algorand Explorer
+app.register_blueprint(wallet_bp, url_prefix="/wallet")  # Wallet Connection
+app.register_blueprint(smart_contract_bp, url_prefix="/smart_contract")  # Smart Contract Debugger
+app.register_blueprint(sdk_bp, url_prefix="/sdk")  # SDK Support
+app.register_blueprint(nft_bp, url_prefix="/nft")  # NFT & ASA Management
+app.register_blueprint(faucet_bp, url_prefix="/faucet")  # Testnet Faucet
 
-@app.route("/query", methods=["POST"])
-def query():
-    """Handles AI chatbot queries."""
-    data = request.json
-    user_input = data.get("message", "")
-    ai_response = process_message(user_input)
-    return jsonify({"response": ai_response})
-
-@app.route("/balance/<address>", methods=["GET"])
-def balance(address):
-    """Fetches the balance of an Algorand account."""
-    balance = get_balance(address)
-    return jsonify({"balance": balance})
+@app.route("/")
+def home():
+    return "🚀 AlgoBotX Backend is Running!"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=5000)
